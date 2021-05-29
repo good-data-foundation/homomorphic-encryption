@@ -8,14 +8,25 @@ class PaillierEncryptor(object):
     homomorphic encryption - Paillier scheme
     """
     def __init__(self):
+        # generate random seed
         self.random_factor = random.randint(1, 999999)
         self.raw_public_key, self.private_key = paillier.generate_paillier_keypair(n_length=512)
         self.public_key = self.raw_public_key.encrypt(self.random_factor)
 
     def encrypt(self, plaintext):
+        """
+        Convert plaintext to ciphertext
+        :param plaintext: numerical value(int, float, double...), numpy.Array, ...
+        :return: ciphertext
+        """
         return plaintext * self.public_key
 
     def decrypt(self, ciphertext):
+        """
+        Convert ciphertext to plaintext
+        :param ciphertext:
+        :return:
+        """
         if isinstance(ciphertext, EncryptedNumber):
             plaintext = self.private_key.decrypt(ciphertext) / self.random_factor
             return plaintext

@@ -2,7 +2,7 @@ import unittest
 
 import numpy as np
 
-from encriptor.paillier_encryptor import PaillierEncryptor
+from encryptor.paillier_encryptor import PaillierEncryptor
 
 
 class TestPaillierEncryptor(unittest.TestCase):
