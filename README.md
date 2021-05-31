@@ -9,4 +9,5 @@ For sensitive data, such as health care information, homomorphic encryption can 
 * Leveled fully homomorphic encryption supports the evaluation of arbitrary circuits composed of multiple types of gates of bounded (pre-determined) depth.
 * Fully homomorphic encryption (FHE) allows the evaluation of arbitrary circuits composed of multiple types of gates of unbounded depth, and is the strongest notion of homomorphic encryption.
 
-
+# License
+The bloomfilter library is licensed under the [Apache License 2.0](https://choosealicense.com/licenses/apache-2.0/), also included in our repository in the `LICENSE` file.
